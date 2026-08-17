@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UrbanEra | Residential Interior Portfolio</title>
+    <meta
+      name="description"
+      content="UrbanEra residential interior portfolio featuring curated house projects, room concepts, and detailed design visuals."
+    />
+    <meta property="og:title" content="UrbanEra | Residential Interior Portfolio" />
+    <meta
+      property="og:description"
+      content="Selected residential interiors, room concepts, and project galleries by UrbanEra."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="UrbanEra home">UrbanEra</a>
+      <nav class="nav-links" aria-label="Portfolio navigation">
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="header-link" href="https://drive.google.com/drive/folders/1w_khDcyZeAnavm9qyiBQt2Bapp3XR48-" target="_blank" rel="noreferrer">
+        Full Archive
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="https://drive.google.com/thumbnail?id=1eHfDIe2n3JgI8Jy8VEK5mZR8kJ2JGuaS&sz=w2200"
+          alt="UrbanEra residential interior entrance hall"
+        />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Residential interiors</p>
+          <h1 id="hero-title">UrbanEra</h1>
+          <p>
+            Calm, detailed living spaces shaped from concept visuals into a portfolio clients can scan quickly.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">View Projects</a>
+            <a class="button button-secondary" href="#contact">Start a Brief</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-band" aria-label="Portfolio highlights">
+        <div>
+          <strong>5</strong>
+          <span>House projects</span>
+        </div>
+        <div>
+          <strong>20+</strong>
+          <span>Curated rooms</span>
+        </div>
+        <div>
+          <strong>80</strong>
+          <span>Selected visuals</span>
+        </div>
+      </section>
+
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h2 id="work-title">Residential project gallery</h2>
+          </div>
+          <p>
+            Each project opens with the strongest room visuals first, then keeps the rest close for comparison.
+          </p>
+        </div>
+
+        <div class="project-tabs" aria-label="Filter projects" data-project-tabs></div>
+        <div class="projects-grid" data-projects></div>
+      </section>
+
+      <section class="process section" id="process" aria-labelledby="process-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Client flow</p>
+            <h2 id="process-title">A simple way to review design work</h2>
+          </div>
+        </div>
+        <div class="process-grid">
+          <article>
+            <span>01</span>
+            <h3>Choose a direction</h3>
+            <p>Clients compare room sets and project moods without digging through folders.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Review details</h3>
+            <p>Every image links back to the original Drive file for full-resolution viewing.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Move to brief</h3>
+            <p>The portfolio leads clients toward a conversation instead of a long file list.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-band" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Ready for the next residence?</h2>
+          <p>
+            Send a private brief with the property size, room list, preferred mood, and target timeline.
+          </p>
+        </div>
+        <a class="button button-primary" href="https://drive.google.com/drive/folders/1w_khDcyZeAnavm9qyiBQt2Bapp3XR48-" target="_blank" rel="noreferrer">
+          Open Portfolio Archive
+        </a>
+      </section>
+    </main>
+
+    <div class="lightbox" data-lightbox hidden>
+      <button class="lightbox-close" type="button" aria-label="Close image" data-lightbox-close>X</button>
+      <img src="" alt="" data-lightbox-image />
+      <div class="lightbox-caption" data-lightbox-caption></div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
