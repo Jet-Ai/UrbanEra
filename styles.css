@@ -252,11 +252,19 @@ h1 {
   color: rgba(20, 20, 20, 0.64);
 }
 
+.gallery-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
 .project-tabs {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
-  margin-bottom: 28px;
 }
 
 .project-tabs button {
@@ -273,6 +281,31 @@ h1 {
   background: var(--ink);
   color: var(--white);
   border-color: var(--ink);
+}
+
+.external-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tab-link-button {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--copper);
+  border-radius: 999px;
+  padding: 0 16px;
+  background: var(--white);
+  color: var(--copper);
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: all 180ms ease;
+}
+
+.tab-link-button:hover {
+  background: var(--copper);
+  color: var(--white);
 }
 
 .projects-grid {
@@ -379,33 +412,6 @@ h1 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.archive-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: clamp(28px, 4vw, 42px);
-  background: var(--white);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-}
-
-.archive-card-content h3 {
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
-  margin-bottom: 8px;
-}
-
-.archive-card-content p {
-  margin-bottom: 0;
-  color: rgba(20, 20, 20, 0.64);
-}
-
-.archive-card .button {
-  flex-shrink: 0;
-  background: var(--ink);
-  color: var(--white);
 }
 
 .process {
@@ -558,17 +564,6 @@ h1 {
   }
 }
 
-@media (max-width: 768px) {
-  .archive-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .archive-card .button {
-    width: 100%;
-  }
-}
-
 @media (max-width: 560px) {
   .site-header {
     padding-inline: 14px;
@@ -598,5 +593,10 @@ h1 {
 
   .media-item span {
     display: none;
+  }
+
+  .gallery-controls {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
