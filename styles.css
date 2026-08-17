@@ -381,6 +381,33 @@ h1 {
   white-space: nowrap;
 }
 
+.archive-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: clamp(28px, 4vw, 42px);
+  background: var(--white);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.archive-card-content h3 {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  margin-bottom: 8px;
+}
+
+.archive-card-content p {
+  margin-bottom: 0;
+  color: rgba(20, 20, 20, 0.64);
+}
+
+.archive-card .button {
+  flex-shrink: 0;
+  background: var(--ink);
+  color: var(--white);
+}
+
 .process {
   padding-bottom: clamp(76px, 10vw, 124px);
 }
@@ -528,6 +555,17 @@ h1 {
 
   .media-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .archive-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .archive-card .button {
+    width: 100%;
   }
 }
 
