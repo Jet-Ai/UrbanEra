@@ -220,6 +220,42 @@ function closeLightbox() {
   document.body.style.overflow = "";
 }
 
+// Interactive Video Carousel Logic
+function initCarousel() {
+  const track = document.querySelector("[data-carousel-track]");
+  if (!track) return;
+
+  const slides = Array.from(track.children);
+  const nextBtn = document.querySelector("[data-carousel-next]");
+  const prevBtn = document.querySelector("[data-carousel-prev]");
+  const dotsNav = document.querySelector("[data-carousel-dots]");
+  let currentIndex = 0;
+
+  dotsNav.innerHTML = "";
+  slides.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.className = `carousel-dot ${index === 0 ? "active" : ""}`;
+    dot.setAttribute("aria-label", `Slide ${index + 1}`);
+    dot.addEventListener("click", () => moveToSlide(index));
+    dotsNav.appendChild(dot);
+  });
+
+  const dots = Array.from(dotsNav.children);
+
+  function moveToSlide(index) {
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots[currentIndex]?.classList.remove("active");
+    dots[index]?.classList.add("active");
+    currentIndex = index;
+  }
+
+  nextBtn?.addEventListener("click", () => moveToSlide(currentIndex + 1));
+  prevBtn?.addEventListener("click", () => moveToSlide(currentIndex - 1));
+}
+
 document.addEventListener("scroll", () => {
   header.classList.toggle("is-scrolled", window.scrollY > 20);
 });
@@ -247,6 +283,7 @@ document.addEventListener("keydown", (event) => {
 
 renderTabs();
 renderProjects();
+initCarousel();
 
 window.URBANERA_PORTFOLIO = {
   driveRoot: DRIVE_ROOT,
